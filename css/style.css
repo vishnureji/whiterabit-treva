@@ -83,13 +83,16 @@ section.contact-us{
 
 section.contact-us::before{
     content: '';
-    background: url(background-element);
+    background: url(background-element.png);
     position: absolute;
-    top: -176px;
-    left: 253px;
-    width: 232px;
-    height: 180px;
+    top: calc(10rem * -1);
+    left: 271px;
+    width: 10rem;
+    height: 10rem;
     z-index: -1;
+    display: none;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .form-header{
@@ -130,4 +133,45 @@ section.contact-us::before{
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 600px) {
+    .theme-button {
+        font-size: 13px;
+    }
+    .hero-contents h1 {
+        font-size: 25px;
+        line-height: 37px;
+    }    
+    .hero-contents p {
+        font-size: 13px;
+        line-height: 21px;
+    }
+    section.contact-us {
+        padding: 39px 0px 60px 0px;
+    }
+    .conatct-form-wrapper {
+        padding: 25px; 
+    }
+    .form-header p {
+        font-size: 13px;
+        line-height: 17px;
+    }
+    .form-header h2 {
+        font-size: 28px;
+    }
+    .contact-form label {
+        font-size: 11px;
+    }
+    .contact-form {
+        gap: 7px;
+    }
+}
+
+@media screen and (min-width: 64em){
+    section.contact-us::before{
+        display: inline-block;
+    }
 }
